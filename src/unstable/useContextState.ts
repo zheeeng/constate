@@ -1,6 +1,5 @@
 import * as React from "react";
 import { parseState } from "./utils";
-import useInitialState from "./useInitialState";
 
 function useContextState() {
   // Provider's render phase
@@ -14,7 +13,14 @@ function useContextState() {
       let index = hooksRef.current.indexOf(ref);
       const isFirstRender = index === -1;
 
-      useInitialState(setStates, initialState);
+      React.useLayoutEffect(() => {
+        if (isFirstRender) {
+          setStates(prevStates => [
+            ...prevStates,
+            parseState(undefined, initialState)
+          ]);
+        }
+      }, []);
 
       if (isFirstRender) {
         index = hooksRef.current.length;

@@ -14,8 +14,9 @@
     "react-dom": "^16.7.0-alpha.2"
   },
   "alias": {
-    "constate": "../src",
-    "react": "./node_modules/react",
-    "react-dom": "./node_modules/react-dom"
+    "constate": "../src"
+  },
+  "resolutions": {
+    "**/@types/react": "../node_modules/@types/react"
   }
 }

@@ -1,4 +1,5 @@
 import createContext from "./createContext";
+import unstable_createContext from "./unstable/createContext";
 
 const {
   Context,
@@ -11,6 +12,7 @@ const {
 } = createContext<{ [key: string]: any }>({});
 
 export {
+  unstable_createContext,
   createContext,
   Context,
   Provider,
