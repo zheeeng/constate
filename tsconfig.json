@@ -20,6 +20,7 @@
     "stripInternal": true
   },
   "exclude": [
+    "dist",
     "examples"
   ]
 }

@@ -8,6 +8,7 @@ function useContextState() {
 
   const useState = React.useCallback(
     (initialState: any) => {
+      console.log(states);
       // Consumer's render phase
       const ref = React.useRef(null);
       let index = hooksRef.current.indexOf(ref);

@@ -6,13 +6,15 @@ import I18n from "./i18n/App";
 import Theming from "./theming/App";
 import TypeScript from "./typescript/App";
 import WizardForm from "./wizard-form/App";
+import unstable_Counter from "./unstable-counter/App";
 
 const paths = {
   counter: Counter,
   i18n: I18n,
   theming: Theming,
   typescript: TypeScript,
-  "wizard-form": WizardForm
+  "wizard-form": WizardForm,
+  "unstable-counter": unstable_Counter
 };
 
 const App = () => (
